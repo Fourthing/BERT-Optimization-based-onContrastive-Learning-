@@ -1,0 +1,8 @@
+sentence1,sentence2,label
+"Albert Einstein was a physicist.",He developed the theory of relativity.,1
+Albert Einstein was a physicist.,"The cat is sleeping on the couch.",0
+"Albert Einstein was born in 1879.","Einstein was a physicist born in 1879.",1
+"The sky is blue today.","It is raining heavily outside.",0
+"Paris is the capital of France.","The Eiffel Tower is located in Paris.",1
+"She likes pizza.","He prefers pasta.",0
+
