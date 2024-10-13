@@ -16,3 +16,8 @@
 
 ### 一个用于实验研究的项目：
 BERT-ContrastiveLearning
+
+### 几个关于项目思路的md文档：
+怎么选择语料.md
+手动实现BERT尝试.md
+关于怎么量化BERT句子表示的对齐性和均匀性.md
