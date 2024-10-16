@@ -17,7 +17,7 @@ def contrastive_loss(embedding1, embedding2, temperature=0.5):
 
 def train_contrastive_learning(sentences, embedder, epochs, learning_rate):
     # 在训练开始前，随机打乱句子对
-    random.shuffle(sentences)  # 随机打乱句子对
+    # random.shuffle(sentences)  # 随机打乱句子对
     """对比学习的训练函数，返回训练后的句子嵌入和训练过程中的损失、对齐性、均匀性"""
     optimizer = optim.Adam(embedder.model.parameters(), lr=learning_rate)
     training_metrics = {"loss": [], "alignment": [], "uniformity": []}

@@ -67,3 +67,38 @@ class SentenceEmbedder:
 #
 #         return embeddings
 """
+
+# from transformers import BertTokenizer, BertModel
+# import torch
+#
+#
+# class SentenceEmbedder:
+#     def __init__(self, model_name):
+#         # 初始化BERT模型和tokenizer
+#         self.tokenizer = BertTokenizer.from_pretrained(model_name)
+#         self.model = BertModel.from_pretrained(model_name)
+#
+#     def get_sentence_embeddings(self, batch):
+#         """
+#         处理批量句子对，获取BERT嵌入表示
+#         batch 包含 input_ids, attention_mask, token_type_ids 和 label
+#         """
+#         # 从batch中获取input_ids, attention_mask和token_type_ids
+#         input_ids, attention_mask, token_type_ids, _ = batch  # 忽略label
+#
+#         # 设置模型为评估模式，关闭dropout等
+#         self.model.eval()
+#
+#         # 禁用梯度计算
+#         with torch.no_grad():
+#             # 获取模型的输出，包含所有层的hidden states
+#             outputs = self.model(
+#                 input_ids=input_ids,
+#                 attention_mask=attention_mask,
+#                 token_type_ids=token_type_ids
+#             )
+#
+#         # 获取[CLS] token的嵌入（第0个位置）
+#         sentence_embeddings = outputs.last_hidden_state[:, 0, :]
+#
+#         return sentence_embeddings
